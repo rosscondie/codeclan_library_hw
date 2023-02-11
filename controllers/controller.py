@@ -2,7 +2,7 @@ from flask import render_template, request, redirect
 
 from app import app
 from models.book import Book
-from models.library import get_book_list, books_list
+from models.library import get_book_list, books_list, create_new_book
 
 @app.route("/")
 def index():
@@ -12,3 +12,13 @@ def index():
 @app.route("/book/<number>")
 def single_book(number):
     return render_template("single_book.html", book = books_list[int(number)])
+
+@app.route("/books", methods=["POST"])
+def create():
+    title = request.form["title"]
+    author = request.form["author"]
+    genre = request.form["genre"]
+
+    new_book = Book(title, author, genre)
+    create_new_book(new_book)
+    return redirect("/")
