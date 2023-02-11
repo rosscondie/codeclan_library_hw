@@ -12,3 +12,6 @@ def get_book_list():
 def create_new_book(book):
     books_list.append(book)
 
+def delete_book(index):
+    books_list.pop(index)
+

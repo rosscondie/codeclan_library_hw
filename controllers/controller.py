@@ -22,3 +22,4 @@ def create():
     new_book = Book(title, author, genre)
     create_new_book(new_book)
     return redirect("/")
+
