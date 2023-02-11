@@ -9,3 +9,6 @@ books_list = [book_1, book_2, book_3]
 def get_book_list():
     return books_list
 
+def create_new_book(book):
+    books_list.append(book)
+
