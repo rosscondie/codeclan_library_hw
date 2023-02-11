@@ -11,11 +11,10 @@
             <h5>Genre: {{book.genre}}</h5>
 
                 {% if book.checked_out %}
-                <p><i><b>Checked Out</i></b></p>
-                {% endif %}
+                <p>Status: <i><b>Checked Out</i></b></p>
+                {% else %}
 
-                {% if book.checked_in %}
-                <p><i><b>Checked In</b></i></p>
+                <p>Status: <i><b>Checked In</i></b></p>
                 {% endif %}
             
             <a href="book/{{ book_list.index(book) }}">Book Details</a>
