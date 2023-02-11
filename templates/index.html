@@ -11,10 +11,19 @@
             <h3>Title: {{book.title}}</h3>
             <h4>Author: {{book.author}}</h4>
             <h5>Genre: {{book.genre}}</h5>
+
+            <div>
+                <form action="/books/{{ loop.index0 }}/delete" method="POST">
+                    <input type="submit" value="Delete">
+                </form>
+            </div>
+
+
             {% endfor %}
         </section>
     </section>
 </section>
+    <hr>
     <form action="/books" method="POST">
         <h2>New Book</h2>
         <div>
