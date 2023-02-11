@@ -3,6 +3,15 @@
 
 <section>
     <h2>Books in Library</h2>
+    <section>
+        {% for book in book_list %}
+        <section>
+            <h3>Title: {{book.title}}</h3>
+            <h4>Author: {{book.author}}</h4>
+            <h5>Genre: {{book.genre}}</h5>
+            {% endfor %}
+        </section>
+    </section>
 </section>
 
 {% endblock %}
