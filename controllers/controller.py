@@ -29,3 +29,5 @@ def create():
 def destroy(index):
     delete_book(int(index))
     return redirect("/")
+
+

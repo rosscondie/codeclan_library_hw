@@ -12,8 +12,9 @@
 
                 {% if book.checked_out %}
                 <p><i><b>Checked Out</i></b></p>
-                {% else %}
-                
+                {% endif %}
+
+                {% if book.checked_in %}
                 <p><i><b>Checked In</b></i></p>
                 {% endif %}
             
@@ -42,7 +43,17 @@
             <label for="genre">Genre: </label>
             <input id="genre" name="genre" type="text">
         </div>
-        <input type="submit">
+            <form action="/books/<index>", method="POST">
+            <div>
+                <label for="checked_in">Checked In: </label>
+                <input type="checkbox" name="checked_in" id="checked_in">
+            </div>
+            <div>
+                <label for="checked_out">Checked Out: </label>
+                <input type="checkbox" name="checked_out" id="checked_out">
+            </div>
+            <input type="submit" value="Add Book">
+            </form>
     </form>
-
-{% endblock %}
+    
+    {% endblock %}
