@@ -9,9 +9,9 @@ def index():
     book_list = get_book_list()
     return render_template("index.html", book_list = book_list)
 
-@app.route("/book/<number>")
-def single_book(number):
-    return render_template("single_book.html", book = books_list[int(number)])
+@app.route("/book/<index>")
+def single_book(index):
+    return render_template("single_book.html", book = books_list[int(index)])
 
 @app.route("/books", methods=["POST"])
 def create():
