@@ -18,8 +18,8 @@ def create():
     title = request.form["title"]
     author = request.form["author"]
     genre = request.form["genre"]
-    checked_out = True if 'checked out' in request.form else False
-    checked_in = True if 'checked in' in request.form else False
+    checked_out = True if 'checked_out' in request.form else False
+    checked_in = True if 'checked_in' in request.form else False
 
     new_book = Book(title=title, author=author, genre=genre, checked_out=checked_out, checked_in=checked_in)
     create_new_book(new_book)
