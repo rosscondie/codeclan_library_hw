@@ -14,4 +14,4 @@ def create_new_book(book):
 
 def delete_book(index):
     books_list.pop(index)
-
+    

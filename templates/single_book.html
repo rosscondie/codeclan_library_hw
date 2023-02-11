@@ -9,7 +9,7 @@
     <p>Genre: {{ book.genre }}</p>
         {% if book.checked_out %}
         <p>Status: <i><b>Checked Out</i></b></p>
-        {% else %}
+        {% elif book.checked_in %}
         <p>Status: <i><b>Checked In</b></i></p>
         {% endif %}
     </p>
