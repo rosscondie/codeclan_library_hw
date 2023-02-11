@@ -1,8 +1,8 @@
 from models.book import Book
 
-book_1 = Book("Shoe Dog", "Phil Knight", "Biography", True)
-book_2 = Book("Born to Run", "Christopher McDougall", "Memoir", False)
-book_3 = Book("Green Lights", "Matthew McConaughey", "Philosophy/Poetry", True)
+book_1 = Book("Shoe Dog", "Phil Knight", "Biography", True, False)
+book_2 = Book("Born to Run", "Christopher McDougall", "Memoir", False, True)
+book_3 = Book("Green Lights", "Matthew McConaughey", "Philosophy/Poetry", True, False)
 
 books_list = [book_1, book_2, book_3]
 
