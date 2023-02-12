@@ -17,11 +17,11 @@
                 <p>Status: <i><b>Checked In</i></b></p>
                 {% endif %}
 
-                <form action="/books/{{ loop.index0 }}/update" method="POST">
+                <!-- <form action="/books/{{ loop.index0 }}/update" method="POST">
                     <label for="update">Change Status To Checked Out</label>
                     <input type="radio" id="update" name="update">
                     <input type="submit" value="Update">
-                </form>
+                </form> -->
             
             <a href="book/{{ book_list.index(book) }}">Book Details</a>
                 <div>

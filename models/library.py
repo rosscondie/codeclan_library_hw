@@ -16,4 +16,4 @@ def delete_book(index):
     books_list.pop(index)
 
 def change_book_status(book):
-   books_list.extend(book)
+    books_list.extend(book)
