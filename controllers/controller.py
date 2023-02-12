@@ -2,7 +2,7 @@ from flask import render_template, request, redirect
 
 from app import app
 from models.book import Book
-from models.library import get_book_list, books_list, create_new_book, delete_book
+from models.library import get_book_list, books_list, create_new_book, delete_book, change_book_status
 
 @app.route("/")
 def index():
@@ -28,6 +28,11 @@ def create():
 @app.route("/books/<index>/delete", methods=["POST"])
 def destroy(index):
     delete_book(int(index))
+    return redirect("/")
+
+@app.route("/books/<index>/update", methods=["POST"])
+def update(index):
+    change_book_status(index)
     return redirect("/")
 
 
