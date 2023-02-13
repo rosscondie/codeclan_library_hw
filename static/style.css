@@ -37,3 +37,24 @@ footer {
     text-decoration: underline;
 }
 
+section > h2 {
+    margin: auto;
+    background-color: cyan;
+    display: grid;
+    justify-content: center;
+    color: black;
+}
+
+.book_details {
+    display: flex;
+    flex-direction: column;
+}
+
+.books {
+    width: 20vw;
+    background-color: lightslategray;
+    padding: 10px;
+    margin: 20px;
+    color: white;
+    
+}

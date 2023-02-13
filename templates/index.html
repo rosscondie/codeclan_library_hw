@@ -5,26 +5,27 @@
     <h2>Books in Library</h2>
     <section>
         {% for book in book_list %}
-        <section>
+    <section class="book_details">
+        <div class="books"> 
             <h3>Title: {{book.title}}</h3>
             <h4>Author: {{book.author}}</h4>
             <h5>Genre: {{book.genre}}</h5>
-
-                {% if book.checked_out %}
+           
+            {% if book.checked_out %}
                 <p>Status: <i><b>Checked Out</i></b></p>
                 {% elif book.checked_in %}
 
                 <p>Status: <i><b>Checked In</i></b></p>
-                {% endif %}
+            {% endif %}
 
+            <a href="book/{{ book_list.index(book) }}">Book Details</a>
+        </div>
                 <!-- <form action="/books/{{ loop.index0 }}/update" method="POST">
                     <label for="update">Change Status To Checked Out</label>
                     <input type="radio" id="update" name="update">
                     <input type="submit" value="Update">
                 </form> -->
-            
-            <a href="book/{{ book_list.index(book) }}">Book Details</a>
-                <div>
+             <div>
                     <form action="/books/{{ loop.index0 }}/delete" method="POST">
                         <input type="submit" value="Delete">
                     </form>
